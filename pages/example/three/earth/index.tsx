@@ -7,12 +7,16 @@ import {
 import { Canvas, useFrame, useLoader } from '@react-three/fiber'
 import { useState } from 'react'
 import * as THREE from 'three'
+const isDev = import.meta.env.MODE === 'development'
 function Com() {
   const radius = 10
   const arc = new THREE.ArcCurve(0, 0, radius + 10, 0, Math.PI * 2, false)
   const arcPoints = arc.getPoints(50)
   const [position, setPosition] = useState(new THREE.Vector2())
-  const earth = useLoader(THREE.TextureLoader, '/earth.jpg')
+  const earth = useLoader(
+    THREE.TextureLoader,
+    isDev ? '/earth.jpg' : '/react-threejs/earth.jpg'
+  )
   const start = new THREE.Spherical(radius + 0, (Math.PI / 180) * 0, 0)
   const start1 = new THREE.Spherical(radius + 2, (Math.PI / 180) * 45, 0)
   const center = new THREE.Spherical(radius + 3, (Math.PI / 180) * 90, 0)
