@@ -1,4 +1,4 @@
-import{p as c}from"./_-FU1-d8Ot.js";import{u as r,j as e}from"./ssg-client-hSKcGeSG.js";function s(t){const n={a:"a",code:"code",h1:"h1",h2:"h2",hr:"hr",p:"p",...r(),...t.components};return e.jsxs(e.Fragment,{children:[e.jsx(n.h2,{id:"vite-pages-app-starter",children:"vite-pages app starter"}),`
+import{p as c}from"./_-FU1-d8Ot.js";import{u as r,j as e}from"./ssg-client-yjrRXNAq.js";function s(t){const n={a:"a",code:"code",h1:"h1",h2:"h2",hr:"hr",p:"p",...r(),...t.components};return e.jsxs(e.Fragment,{children:[e.jsx(n.h2,{id:"vite-pages-app-starter",children:"vite-pages app starter"}),`
 `,e.jsx(n.p,{children:e.jsx(n.a,{href:"https://felhz.github.io/react-threejs/",children:"展示地址"})}),`
 `,e.jsx(n.h1,{id:"how-to-use",children:"How to use"}),`
 `,e.jsxs(n.p,{children:[e.jsx(n.code,{children:"npm install"})," or ",e.jsx(n.code,{children:"pnpm install"})," or ",e.jsx(n.code,{children:"yarn"})]}),`

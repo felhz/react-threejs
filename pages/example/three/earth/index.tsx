@@ -50,7 +50,6 @@ function Com() {
         <sphereGeometry args={[radius]} />
         <meshStandardMaterial map={earth} />
       </mesh>
-      <Line points={curvePoints} color={new THREE.Color(0xff0000)} />
       <mesh>
         <Line points={arcPoints} color={new THREE.Color(0x00ff00)}></Line>
         <mesh position={[...position, 0]}>
@@ -71,9 +70,10 @@ const Map = () => {
     <Canvas
       shadows
       dpr={[1, 2]}
+      style={{ height: '80vh' }}
       gl={{ alpha: false }}
       scene={{ background: new THREE.Color(0xffffff) }}
-      camera={{ position: [0, 0, 40], fov: 45 }}
+      camera={{ position: [0, 0, 80], fov: 45 }}
     >
       <OrbitControls />
       {/* <axesHelper args={[10]} /> */}
