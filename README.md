@@ -1,6 +1,7 @@
 ## vite-pages app starter
 
-[展示地址](https://felhz.github.io/react-threejs/)
+[展示地址](/react-threejs/)
+<Demo src='./pages/example/index.tsx'/>
 
 # How to use
 
@@ -15,7 +16,5 @@ Edit `pages/page1$.tsx` or other source files, the playground will inflect your 
 `npm run ssr` The app are built into a static site (Static-Site Generation) and served.
 
 ---
-
-Checkout [vite-plugin-react-pages](https://github.com/vitejs/vite-plugin-react-pages) for more info.
 
 # react-threejs
