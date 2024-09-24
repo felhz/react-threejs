@@ -1,1 +1,0 @@
-import{j as e}from"./index-BZE616-t.js";const t=()=>e.jsx("div",{children:"threejs 相关demo"}),o=Object.freeze(Object.defineProperty({__proto__:null,default:t},Symbol.toStringTag,{value:"Module"})),r={};r.main=o;export{r as default};

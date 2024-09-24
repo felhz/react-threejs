@@ -4,7 +4,7 @@ import { defineConfig } from 'vite'
 import pages from 'vite-plugin-react-pages'
 const isDev = process.env.NODE_ENV === 'development'
 export default defineConfig({
-  base: isDev ? '' : '/vite-plugin-react-pages/',
+  base: isDev ? '' : '/react-threejs/',
   build: {
     outDir: 'docs',
   },
