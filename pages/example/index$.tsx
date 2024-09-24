@@ -1,7 +1,16 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import Map from './three/earth'
 
 const Page = () => {
-  return <div>threejs 相关demo</div>
+  return (
+    <div>
+      <Map />
+      <Link to={'/example/earth'}>earth</Link>
+      <br />
+      <Link to={'/example/geo'}>geo</Link>
+    </div>
+  )
 }
 
 export default Page

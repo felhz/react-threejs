@@ -4,7 +4,7 @@ import { createTheme, defaultSideNavs } from 'vite-pages-theme-doc'
 export default createTheme({
   logo: <div style={{ fontSize: '20px' }}>THREEJS EXAMPLE</div>,
   topNavs: [
-    { label: 'Home', path: '/' },
+    // { label: 'Home', path: '/' },
     {
       label: 'Example',
       path: '/example',
