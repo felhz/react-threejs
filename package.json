@@ -12,9 +12,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@react-three/drei": "^9.113.0",
+    "@react-three/fiber": "^8.17.8",
+    "@types/three": "^0.168.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.21.3"
+    "react-router-dom": "^6.21.3",
+    "three": "^0.168.0"
   },
   "devDependencies": {
     "@mdx-js/react": "^3.0.0",
