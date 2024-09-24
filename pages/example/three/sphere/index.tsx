@@ -3,6 +3,7 @@ import { Canvas, useFrame, useLoader } from '@react-three/fiber'
 import * as turf from '@turf/turf'
 import { useRef } from 'react'
 import * as THREE from 'three'
+import { staticPath } from '../../../utils'
 
 const greatArc = (start, end) => {
   return turf.greatCircle(start, end, {
@@ -55,7 +56,7 @@ function Com({ start, end, lineColor = 'red' }) {
   )
 }
 const Earth = () => {
-  const earth = useLoader(THREE.TextureLoader, '/earth.jpg')
+  const earth = useLoader(THREE.TextureLoader, staticPath + '/earth.jpg')
   return (
     <Sphere args={[15, 1000, 1000]}>
       <meshStandardMaterial map={earth} />

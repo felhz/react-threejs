@@ -8,6 +8,7 @@ export default defineConfig({
   build: {
     outDir: 'docs',
   },
+  resolve: { alias: { '@': path.resolve(__dirname, 'pages') } },
   plugins: [
     react(),
     pages({
