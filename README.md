@@ -1,9 +1,6 @@
 ## vite-pages app starter
 
-This is a demo project for [vite-plugin-react-pages](https://github.com/vitejs/vite-plugin-react-pages).
-This project demonstrate how to develop a React app using [vite-plugin-react-pages](https://github.com/vitejs/vite-plugin-react-pages) as framework.
-
-You can run this demo in [StackBlitz](https://stackblitz.com/fork/github/vitejs/vite-plugin-react-pages/tree/main/packages/create-project/template-app?file=README.md&terminal=dev), entirely in your browser!
+[展示地址](https://felhz.github.io/react-threejs/)
 
 # How to use
 
@@ -20,4 +17,5 @@ Edit `pages/page1$.tsx` or other source files, the playground will inflect your 
 ---
 
 Checkout [vite-plugin-react-pages](https://github.com/vitejs/vite-plugin-react-pages) for more info.
+
 # react-threejs
