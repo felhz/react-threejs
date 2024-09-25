@@ -56,7 +56,7 @@ function Com({ start, end, lineColor = 'red' }) {
   )
 }
 const Earth = () => {
-  const earth = useLoader(THREE.TextureLoader, staticPath + '/earth.jpg')
+  const earth = useLoader(THREE.TextureLoader, staticPath + '/earth2.png')
   return (
     <Sphere args={[15, 1000, 1000]}>
       <meshStandardMaterial map={earth} />
