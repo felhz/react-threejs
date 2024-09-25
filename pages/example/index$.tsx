@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import Map from './three/earth'
+import Map from './three/geo'
 
 const Page = () => {
   return (
