@@ -22,7 +22,7 @@ export default createTheme({
     },
   ],
   sideNavs: (ctx) => {
-    return defaultSideNavs(ctx, {
+    let navs = defaultSideNavs(ctx, {
       groupConfig: {
         reference: {
           concepts: {
@@ -40,5 +40,6 @@ export default createTheme({
         },
       },
     })
+    return navs
   },
 })
