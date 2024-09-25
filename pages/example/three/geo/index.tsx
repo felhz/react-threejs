@@ -34,13 +34,18 @@ function Com() {
         const coordinates = elem.geometry.coordinates
         const shapes = []
         // 循环坐标数组
-        coordinates.forEach((multiPolygon) => {
+        coordinates.forEach((multiPolygon, i) => {
           multiPolygon.forEach((polygon) => {
-            const points = []
+            if (elem.geometry.type == 'Polygon') {
+              const [x, y] = projection(polygon)
+              let point = new THREE.Vector2(x, -y)
+              shapes.push(point)
+              return
+            }
+            if (i > 0) return
             for (let i = 0; i < polygon.length; i++) {
               const [x, y] = projection(polygon[i])
               let point = new THREE.Vector2(x, -y)
-              points.push(point)
               shapes.push(point)
             }
           })
@@ -55,6 +60,7 @@ function Com() {
     generateGeometry(_data)
     setFonts(fontsArr)
   }, [])
+
   const [checked, setChecked] = useState(false)
 
   return (
@@ -64,7 +70,6 @@ function Com() {
           <mesh
             key={item.name}
             onClick={(e) => {
-              alert(item.name)
               console.log(item)
             }}
             onPointerOver={() => {
