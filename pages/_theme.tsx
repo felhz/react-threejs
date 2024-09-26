@@ -10,12 +10,13 @@ export default createTheme({
       path: '/example',
       activeIfMatch: '/example',
     },
-    { label: 'Users', path: '/users', activeIfMatch: '/users' },
     {
-      label: 'Guide',
-      path: '/guide/introduce',
+      label: '算法',
+      path: '/algor',
       activeIfMatch: '/guide',
     },
+    // { label: 'Users', path: '/users', activeIfMatch: '/users' },
+
     {
       label: 'Vite Pages',
       href: 'https://github.com/vitejs/vite-plugin-react-pages',
