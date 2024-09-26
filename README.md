@@ -1,6 +1,6 @@
 ## vite-pages app starter
 
-[展示地址](https://felhz.github.io/react-threejs/example/)
+[展示地址](https://felhz.github.io/react-threejs)
 
 # How to use
 
