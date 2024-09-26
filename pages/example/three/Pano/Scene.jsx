@@ -11,14 +11,12 @@ let textTuresConfig = [
   '/pano/bottom.png',
   '/pano/front.png',
   '/pano/back.png',
-]
+].map((textTure) => staticPath + textTure)
 
 const Scene = () => {
   const { gl, camera } = useThree()
   //["left", "right", "top", "bottom", "front", "back"]
-  const textTures = useTexture(
-    textTuresConfig.map((textTure) => staticPath + textTure)
-  )
+  const textTures = useTexture(textTuresConfig)
 
   useEffect(() => {
     gl.setSize(300, 300)

@@ -6,7 +6,7 @@ export default createTheme({
   topNavs: [
     // { label: 'Home', path: '/' },
     {
-      label: 'Example',
+      label: 'THREEJS',
       path: '/example',
       activeIfMatch: '/example',
     },
