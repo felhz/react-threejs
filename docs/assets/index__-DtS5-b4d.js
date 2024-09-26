@@ -1,0 +1,3 @@
+import{p as i}from"./_-C7iaKh_Q.js";import{u as r,j as e}from"./ssg-client-4kCfdLIF.js";import{S as s}from"./index-DZ-2uk-1.js";import"./react-three-fiber.esm-BGKXzqMs.js";import"./index-YwzUBO0B.js";import"./OrbitControls-HsT3lwqv.js";import"./shapes-TlNlRTiy.js";import"./Line-B0ntdRL2.js";function o(t){const n={h3:"h3",...r(),...t.components};return e.jsxs(e.Fragment,{children:[e.jsx(n.h3,{id:"三维球体",children:"三维球体"}),`
+`,`
+`,e.jsx(s,{})]})}function u(t={}){const{wrapper:n}={...r(),...t.components};return n?e.jsx(n,{...t,children:e.jsx(o,{...t})}):o(t)}const a=Object.freeze(Object.defineProperty({__proto__:null,default:u},Symbol.toStringTag,{value:"Module"})),m={};m.outlineInfo=i;m.main=a;export{m as default};

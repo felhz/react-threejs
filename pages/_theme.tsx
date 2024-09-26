@@ -40,6 +40,13 @@ export default createTheme({
         },
       },
     })
+
+    if (!ctx.loadState.routePath.includes('/example')) {
+      navs.unshift({
+        label: 'THREEJS',
+        path: '/example',
+      })
+    }
     return navs
   },
 })
