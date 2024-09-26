@@ -1,0 +1,1 @@
+const t=[{depth:1,text:"Getting Started",id:"getting-started"}];let e;const o=Object.freeze(Object.defineProperty({__proto__:null,onUpdate:e,outline:t},Symbol.toStringTag,{value:"Module"}));export{o as p};
