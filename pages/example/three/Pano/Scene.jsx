@@ -1,24 +1,29 @@
-import { useTexture } from '@react-three/drei';
-import { useThree } from '@react-three/fiber';
-import { useEffect } from 'react';
-import * as THREE from 'three';
+import { useTexture } from '@react-three/drei'
+import { useThree } from '@react-three/fiber'
+import { useEffect } from 'react'
+import * as THREE from 'three'
+import { staticPath } from '../../../utils'
+
+let textTuresConfig = [
+  '/pano/left.png',
+  '/pano/right.png',
+  '/pano/top.png',
+  '/pano/bottom.png',
+  '/pano/front.png',
+  '/pano/back.png',
+]
 
 const Scene = () => {
-  const { gl, camera } = useThree();
+  const { gl, camera } = useThree()
   //["left", "right", "top", "bottom", "front", "back"]
-  const textTures = useTexture([
-    '/pano/left.png',
-    '/pano/right.png',
-    '/pano/top.png',
-    '/pano/bottom.png',
-    '/pano/front.png',
-    '/pano/back.png',
-  ]);
+  const textTures = useTexture(
+    textTuresConfig.map((textTure) => staticPath + textTure)
+  )
 
   useEffect(() => {
-    gl.setSize(300, 300);
-    camera.position.set(1, 0, -1.5);
-  }, []);
+    gl.setSize(300, 300)
+    camera.position.set(1, 0, -1.5)
+  }, [])
 
   return (
     <mesh
@@ -27,11 +32,11 @@ const Scene = () => {
         return new THREE.MeshBasicMaterial({
           map: textTure,
           side: THREE.BackSide,
-        });
+        })
       })}
     >
       <boxGeometry args={[3, 3, 3]}></boxGeometry>
     </mesh>
-  );
-};
-export default Scene;
+  )
+}
+export default Scene
