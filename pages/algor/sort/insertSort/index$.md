@@ -17,4 +17,4 @@ const inertSort = (arr) => {
 }
 ```
 
-<Demo src="./insertSort.tsx" />
+<Demo src="./index.tsx" />

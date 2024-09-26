@@ -1,4 +1,4 @@
-import{p as a}from"./insertSort_-FU1-d8Ot.js";import{j as t,u as l}from"./ssg-client-CCfk9ehg.js";const i=e=>{for(let n=1;n<e.length;n++){const o=e[n];let r=n-1;for(;r>=0&&e[r]>o;)e[r+1]=e[r],r--;e[r+1]=o}return e},d=()=>{const e=[3,5,1,4,2];return console.log(i(e)),t.jsxs("div",{children:["输入:",e.toString()," ",t.jsx("br",{}),"输出: ",i(e).toString()]})},m=`import React from 'react'
+import{p as a}from"./index_-FU1-d8Ot.js";import{j as t,u as l}from"./ssg-client-Bn3Mnl6o.js";const i=e=>{for(let n=1;n<e.length;n++){const o=e[n];let r=n-1;for(;r>=0&&e[r]>o;)e[r+1]=e[r],r--;e[r+1]=o}return e},d=()=>{const e=[3,5,1,4,2];return console.log(i(e)),t.jsxs("div",{children:["输入:",e.toString()," ",t.jsx("br",{}),"输出: ",i(e).toString()]})},m=`import React from 'react'
 
 const inertSort = (arr) => {
   for (let i = 1; i < arr.length; i++) {

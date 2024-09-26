@@ -1,4 +1,4 @@
-import{p as s}from"./geo_-FU1-d8Ot.js";import{u as r,j as t}from"./ssg-client-CCfk9ehg.js";import{G as c}from"./index-Iunmn1x7.js";import"./index-CSwHO5PT.js";import"./react-three-fiber.esm-CWoqMgtX.js";import"./OrbitControls-CIYEILIH.js";import"./GizmoViewport-D0G8JVrZ.js";import"./Hud-CiGby4PC.js";import"./Line-BOuCpJza.js";import"./shapes-7Ma6YXtE.js";import"./Text-C4W7PPX_.js";import"./index-c_NJVKPv.js";const a=`import { staticPath } from '@/utils'
+import{p as s}from"./geo_-FU1-d8Ot.js";import{u as r,j as t}from"./ssg-client-Bn3Mnl6o.js";import{G as c}from"./index-DLua-G5c.js";import"./index-CSwHO5PT.js";import"./react-three-fiber.esm-BsxbCMSd.js";import"./OrbitControls-CIOTPSP3.js";import"./GizmoViewport-Dyx0pWcj.js";import"./Hud-0B6H8J7O.js";import"./Line-DuqW45px.js";import"./shapes-CzsSO_mb.js";import"./Text-CvtlZMxZ.js";import"./index-c_NJVKPv.js";const a=`import { staticPath } from '@/utils'
 import {
   Extrude,
   GizmoHelper,
