@@ -1,3 +1,5 @@
+import { staticPath } from '../../../utils'
+
 import {
   Billboard,
   OrbitControls,
@@ -14,7 +16,7 @@ const TextD = () => {
   const loader = new FontLoader()
 
   useEffect(() => {
-    loader.load('/font/bold.json', function (font) {
+    loader.load(staticPath + '/font/bold.json', function (font) {
       const geometry = new TextGeometry('Hello!', {
         font: font,
         size: 3,
@@ -65,7 +67,7 @@ const Sphereg = () => {
         dpr={[1, 2]}
         gl={{ alpha: false }}
         scene={{ background: new THREE.Color(0xffffff) }}
-        camera={{ position: [0, 0, -40], fov: 70 }}
+        camera={{ position: [10, 10, 20], fov: 70 }}
       >
         <OrbitControls />
         <axesHelper args={[10]} />
