@@ -1,32 +1,31 @@
-import { Box, OrbitControls, Sphere } from '@react-three/drei'
+import { Box, OrbitControls, Sphere, SpotLight } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
 import React from 'react'
 import * as THREE from 'three'
 console.log(THREE)
-let spotLight = new THREE.SpotLight(0x00ffff, 1000, 100, Math.PI / 18, 0.5, 1)
-
-spotLight.position.set(2, 15, 0)
-spotLight.castShadow = true
 const TextD = () => {
   return (
     <>
       <Box args={[1, 1, 1]} position={[1, 1, 0]} castShadow={true}>
-        <meshLambertMaterial color={'red'} />
+        <meshLambertMaterial color={'pink'} />
       </Box>
       <spotLight
         castShadow={true}
         args={[0xffffff, 1, 100, Math.PI / 18, 0.3, 0.01]}
         position={[-2, 15, 0]}
       />
-      {/* <SpotLight
-        args={[new THREE.Color(0xff0000), 1, 1, Math.PI / 1, 0, 0.1]}
-        castShadow={true}
-        position={[5, 5, 0]}
-      ></SpotLight> */}
+      <SpotLight
+        color={0x00ffff}
+        distance={10}
+        angle={Math.PI / 2}
+        attenuation={5}
+        anglePower={1}
+        position={[3, 3, 0]}
+      ></SpotLight>
       <directionalLight
         castShadow={true}
         args={[0xffffff, 1]}
-        position={[5, 12, 0]}
+        position={[-20, 12, 0]}
       ></directionalLight>
       <Sphere args={[1, 32, 32]} position={[5, 1, 0]} castShadow={true}>
         <meshLambertMaterial color={'red'} opacity={0.1} />
