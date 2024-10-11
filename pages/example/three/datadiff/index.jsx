@@ -23,6 +23,8 @@ const Bar = ({ value = 5, text = '未设置', axisX = 0 }) => {
   }
   const texture = useTexture(staticPath + '/pano/bar.jpg')
   texture.repeat.set(0.2, 1)
+  // 反转纹理
+  // texture.flipY = false
 
   return (
     <mesh position={[axisX, 0, 0]}>
