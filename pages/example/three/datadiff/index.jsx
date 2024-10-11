@@ -5,8 +5,9 @@ import {
   OrbitControls,
   Plane,
   Text,
+  useTexture,
 } from '@react-three/drei'
-import { Canvas, useFrame } from '@react-three/fiber'
+import { Canvas } from '@react-three/fiber'
 import React, { useEffect } from 'react'
 import * as THREE from 'three'
 import { staticPath } from '../../../utils'
@@ -20,10 +21,8 @@ const Bar = ({ value = 5, text = '未设置', axisX = 0 }) => {
       height: 2,
     },
   }
-  useFrame(() => {
-    // console.log(pivotControl.current.rotation)
-    // text.current.rotation.z += 0.01
-  })
+  const texture = useTexture(staticPath + '/pano/bar.jpg')
+  texture.repeat.set(0.2, 1)
 
   return (
     <mesh position={[axisX, 0, 0]}>
@@ -33,11 +32,10 @@ const Bar = ({ value = 5, text = '未设置', axisX = 0 }) => {
           material={
             new THREE.MeshBasicMaterial({
               color: new THREE.Color(0xffffff),
-              map: new THREE.TextureLoader().load(staticPath + '/pano/bar.jpg'),
+              map: texture,
             })
           }
         />
-        <meshNormalMaterial />
       </Center>
       <Text
         anchorY={'top'}
