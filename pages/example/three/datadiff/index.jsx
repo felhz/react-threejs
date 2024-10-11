@@ -1,13 +1,12 @@
 import {
   Box,
   Center,
-  Environment,
   OrbitControls,
   Plane,
   Text,
   useTexture,
 } from '@react-three/drei'
-import { Canvas } from '@react-three/fiber'
+import { Canvas, useThree } from '@react-three/fiber'
 import React, { useEffect } from 'react'
 import * as THREE from 'three'
 import { staticPath } from '../../../utils'
@@ -64,6 +63,12 @@ const Bar = ({ value = 5, text = '未设置', axisX = 0 }) => {
 }
 
 function Com() {
+  const texture = useTexture(staticPath + '/pano/home.jpg')
+  const { scene } = useThree()
+  useEffect(() => {
+    scene.background = texture
+  }, [])
+
   const data = [
     { value: 5, text: '未设置' },
     { value: 10, text: '已设置' },
@@ -82,14 +87,11 @@ const DataDiff = () => {
     <div style={{ height: '60vh' }}>
       <Canvas
         dpr={[1, 2]}
-        scene={{ background: new THREE.Color(0xffffff), castShadow: true }}
+        scene={{ background: new THREE.Color(0xffffff) }}
         gl={{ alpha: false }}
         camera={{ position: [0, 0, 20], fov: 70 }}
       >
-        <Environment
-          background={true}
-          files={staticPath + '/pano/jizhuangxhdr.jpg'}
-        />
+        {/* <Environment background={true} files={staticPath + '/pano/home.jpg'} /> */}
         <OrbitControls />
         <axesHelper args={[10]} />
         <ambientLight intensity={Math.PI} />
