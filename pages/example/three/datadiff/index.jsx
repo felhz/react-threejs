@@ -2,7 +2,6 @@ import {
   Box,
   Center,
   MeshWobbleMaterial,
-  OrbitControls,
   Plane,
   Text,
   useTexture,
@@ -34,7 +33,7 @@ const Bar = ({ value = 5, text = '未设置', axisX = 0 }) => {
         <Box
           args={[bar.width, value, bar.z]}
           material={
-            new THREE.MeshLambertMaterial({
+            new THREE.MeshStandardMaterial({
               color: new THREE.Color(0x00ff00),
               opacity: 0.5,
               // map: texture,
@@ -79,18 +78,25 @@ function Com() {
     { value: 15, text: '可口可乐' },
   ]
   useEffect(() => {
-    camera.lookAt(camera.position.x, 0, 0)
-    camera.position.x = 
-    // setInterval(() => {
-    //   if (current.current > data.length) {
-    //     current.current = 0
-    //     camera.position.x = 0
-    //   }
-    //   camera.position.x += 3.5
-    //   camera.lookAt(camera.position.x, 0, 0)
-    //   debugger
-    //   current.current += 1
-    // }, 1000)
+    window.camera = camera
+
+    setInterval(() => {
+      current.current += 1
+      camera.position.x = 7 * current.current
+      camera.lookAt(
+        new THREE.Vector3(
+          7 * current.current,
+          // data[current.current - 1].value,
+          0,
+          0
+        )
+      )
+
+      if (current.current > data.length) {
+        current.current = 1
+        camera.position.x = 0
+      }
+    }, 1000)
   }, [])
   return (
     <>
@@ -107,10 +113,10 @@ const DataDiff = () => {
         dpr={[1, 2]}
         scene={{ background: new THREE.Color(0xffffff) }}
         gl={{ alpha: false }}
-        camera={{ position: [0, 0, 20], fov: 70 }}
+        camera={{ position: [0, 0, 37], fov: 45 }}
       >
         {/* <Environment background={true} files={staticPath + '/pano/home.jpg'} /> */}
-        <OrbitControls />
+        {/* <OrbitControls /> */}
         <axesHelper args={[10]} />
         <ambientLight intensity={Math.PI} />
         <Com />
