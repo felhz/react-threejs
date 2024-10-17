@@ -1,0 +1,1 @@
+import{j as e}from"./ssg-client-jqSihuOd.js";const t=()=>e.jsx("div",{children:"暂无内容"}),o=Object.freeze(Object.defineProperty({__proto__:null,default:t},Symbol.toStringTag,{value:"Module"})),r={};r.main=o;export{r as default};
