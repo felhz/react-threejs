@@ -88,67 +88,57 @@ const Bar = forwardRef(
 
 function Com() {
   const { camera, scene } = useThree()
-  const current = useRef(1)
-  const wallRef = useRef()
+  const current = useRef(0)
+  const barRef = useRef({})
+  const lightRef = useRef()
+  const spoitLightRef = useRef()
+
   const data = [
     { value: 5, text: '其他饮品' },
     { value: 7, text: '百事可乐', img: 'baishi.webp' },
     { value: 10, text: '可口可乐', img: 'kele.jpeg' },
   ]
-  const lightRef = useRef()
+
   useEffect(() => {
     window.camera = camera
-    // lightRef.current.target = wallRef.current
-
-    // scene.add(new THREE.DirectionalLightHelper(lightRef.current))
     setInterval(() => {
-      // current.current += 1
-      // camera.position.x = 7 * current.current
-      // camera.lookAt(
-      //   new THREE.Vector3(
-      //     7 * current.current,
-      //     // data[current.current - 1].value,
-      //     0,
-      //     0
-      //   )
-      // )
-
-      if (current.current > data.length) {
-        current.current = 1
-        camera.position.x = 0
+      let target = barRef.current[current.current]
+      lightRef.current.target = target
+      lightRef.current.position.x = target.position.x
+      spoitLightRef.current.target = target
+      spoitLightRef.current.position.x = target.position.x
+      if (current.current >= data.length - 1) {
+        current.current = 0
+      } else {
+        current.current += 1
       }
     }, 1000)
   }, [])
   return (
     <>
-      {/* <directionalLight
-        ref={lightRef}
-        position={[5, 20, 20]}
-        args={[0xffffff, 1]}
-        castShadow={true}
-      /> */}
       <SpotLight
         color={0x00ffff}
         distance={30}
         angle={Math.PI / 3}
         attenuation={31}
         anglePower={0.4}
+        ref={spoitLightRef}
         position={[0, 31, 0]}
       ></SpotLight>
       <spotLight
         ref={lightRef}
         castShadow={true}
-        args={[0xffffff, 10, 40, Math.PI / 10, 0.3, 0.1]}
+        args={[0xffffff, 10, 40, Math.PI / 10, 0.4, 0.1]}
         position={[0, 30, 7]}
       />
       {data.map((item, index) => {
+        let ref = (el) => {
+          barRef.current[index] = el
+        }
         // 间距增量
         let space = 12
         let axisX = index * space
-        if (index === data.length - 1) {
-          return <Bar ref={wallRef} {...item} key={index} axisX={axisX} />
-        }
-        return <Bar {...item} key={index} axisX={axisX} />
+        return <Bar ref={ref} {...item} key={index} axisX={axisX} />
       })}
     </>
   )
