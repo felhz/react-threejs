@@ -61,7 +61,7 @@ const Bar = forwardRef(
           args={[bar.width, bar.img.height]}
           position={[0, value - bar.img.height / 2, bar.z / 2 + 0.1]}
           material={
-            new THREE.MeshBasicMaterial({
+            new THREE.MeshStandardMaterial({
               map: itemTexture,
               side: THREE.DoubleSide,
             })
@@ -98,9 +98,8 @@ function Com() {
   const lightRef = useRef()
   useEffect(() => {
     window.camera = camera
-    // lightRef.current.lookAt(wallRef.current.position)
-    // lightRef.current.lookAt(camera.position)
-    // camera.lookAt(wallRef.current.position)
+    // lightRef.current.target = wallRef.current
+
     // scene.add(new THREE.DirectionalLightHelper(lightRef.current))
     setInterval(() => {
       // current.current += 1
@@ -139,14 +138,17 @@ function Com() {
       <spotLight
         ref={lightRef}
         castShadow={true}
-        args={[0xffffff, 10, 40, Math.PI / 3, 0.3, 0.1]}
-        position={[0, 30, 10]}
+        args={[0xffffff, 10, 40, Math.PI / 10, 0.3, 0.1]}
+        position={[0, 30, 7]}
       />
       {data.map((item, index) => {
+        // 间距增量
+        let space = 12
+        let axisX = index * space
         if (index === data.length - 1) {
-          return <Bar ref={wallRef} {...item} key={index} axisX={index * 7} />
+          return <Bar ref={wallRef} {...item} key={index} axisX={axisX} />
         }
-        return <Bar {...item} key={index} axisX={index * 7} />
+        return <Bar {...item} key={index} axisX={axisX} />
       })}
     </>
   )
@@ -157,7 +159,7 @@ const DataDiff = () => {
       <Canvas
         dpr={[1, 2]}
         shadows={true}
-        scene={{ background: new THREE.Color(0xead8b1) }}
+        // scene={{ background: new THREE.Color(0xead8b1) }}
         gl={{ alpha: false }}
         camera={{ position: [0, 25, 30], fov: 45 }}
       >
