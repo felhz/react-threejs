@@ -1,1 +1,0 @@
-const e=[{depth:2,text:"常用 liunx 命令",id:"常用-liunx-命令"},{depth:2,text:"搜索当前目录文件名包含指定字符串的文件",id:"搜索当前目录文件名包含指定字符串的文件"}];let t;const o=Object.freeze(Object.defineProperty({__proto__:null,onUpdate:t,outline:e},Symbol.toStringTag,{value:"Module"}));export{o as p};

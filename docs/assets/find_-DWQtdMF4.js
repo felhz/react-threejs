@@ -1,1 +1,0 @@
-const e=[{depth:2,text:"常用 liunx 命令",id:"常用-liunx-命令"},{depth:2,text:"搜索当前目录文件名包含指定字符串的文件",id:"搜索当前目录文件名包含指定字符串的文件"},{depth:2,text:"Usage: find.sh",id:"usage-findsh"}];let t;const n=Object.freeze(Object.defineProperty({__proto__:null,onUpdate:t,outline:e},Symbol.toStringTag,{value:"Module"}));export{n as p};
