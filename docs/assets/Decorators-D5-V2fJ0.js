@@ -1,1 +1,0 @@
-import{j as e}from"./index-B8vB_q8q.js";const t=()=>e.jsx("div",{children:"暂无内容"}),o=Object.freeze(Object.defineProperty({__proto__:null,default:t},Symbol.toStringTag,{value:"Module"})),r={};r.main=o;export{r as default};
